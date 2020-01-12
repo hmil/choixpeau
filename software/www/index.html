@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Choixpeau</title>
+    <style>
+        html, body {
+            margin: 0;
+            background-color: #222;
+            color: #ffe;
+            box-sizing: border-box;
+        }
+        #root {
+            padding: 5px;
+        }
+        .btn {
+            display: block;
+            margin: 2px;
+            cursor: pointer;
+            padding: 10px;
+            text-align: center;
+            font-size: 20px;
+            background-color: #ccc;
+            color: #222;
+            flex-grow: 1;
+        }
+        .btn.active {
+            border: 3px #0f0 solid;
+        }
+        .houses-btns {
+            display: flex;
+        }
+        .houses-btns > * {
+            flex-grow: 1;
+        }
+        .btn.griffondor {
+            background-color: #4d0505;
+            color: #f3c01c;
+        }
+        .btn.serpentar {
+            color: #9e9996;
+            background-color: #25581f;
+        }
+        .btn.pouffsoufle {
+            color: #383102;
+            background-color: #FFDD00;
+        }
+        .btn.serdaigle {
+            color: #a67a53;
+            background-color: #0b304a;
+        }
+
+        #speeches {
+            display: flex;
+            flex-wrap: wrap;
+        }
+    </style>
+</head>
+<body onload="main()">
+    <div id="root">
+        <section>
+            <h2>Houses</h2>
+            <div class="houses-btns">
+                <div class="btn griffondor" id="house_griffondor_1">G</div>
+                <div class="btn serpentar" id="house_serpentar_1">SP</div>
+                <div class="btn pouffsoufle" id="house_pouffsoufle_1">P</div>
+                <div class="btn serdaigle" id="house_serdaigle_1">SA</div>
+            </div>
+            <div style="display: flex;">
+                <div class="btn random" id="house_random">Random</div>
+                <div class="btn random" id="house_rick">Rick</div>
+            </div>
+        </section>
+        <section>
+            <h2>Speech</h2>
+            <div id="speeches"></div>
+        </section>
+        <section>
+            <h2>Actions</h2>
+            <div id="trigger_choice" class="btn">Trigger</div>
+            <div style="display: flex;"></div>
+                <div id="toggle_animation" class="btn">Animations</div>
+                <div id="toggle_detector" class="btn">Detector</div>
+            </div>
+        </section>
+    </div>
+    <script src="main.js" type="text/javascript"></script>
+</body>
+</html>
